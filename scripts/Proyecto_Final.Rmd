@@ -421,6 +421,8 @@ confint(Modelo.Toxicidad)
 
 Se puede notar que todas las especies y las especies juntas tienen un efecto significativo negativo sobre la toxicidad del compuesto resultante; lo que se puede interpretar como, todas las especies reducen la toxicidad en lugar de aumentarla. Todavía mas relevante, podemos ver que el cultivo con todas las especies presenta una magnitud de cambio mucho menor en comparación con las demás especies individuales (Estimado = -4.690, error std = 0.683, p-value = 1.08 e ^-10^ ), IC = [-6.036, -3.343]. Importante de notar que, este modelo explica 24% de la variación de los datos (R^2^ = 0.2415), lo cual tiene sentido ya que estamos utilizando únicamente la toxicidad, para un efecto total, que incluye los directos e indirectos. 
 
+Este archivo se puede acceder desde un [repositorio remoto en GitHub](https://github.com/GalitAkerman/ProyectoFinal_Repro)
+https://github.com/GalitAkerman/ProyectoFinal_Repro
 
 ### Referencias
 
