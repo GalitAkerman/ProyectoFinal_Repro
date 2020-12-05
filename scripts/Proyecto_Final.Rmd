@@ -424,5 +424,12 @@ Se puede notar que todas las especies y las especies juntas tienen un efecto sig
 Este archivo se puede acceder desde un [repositorio remoto en GitHub](https://github.com/GalitAkerman/ProyectoFinal_Repro)
 https://github.com/GalitAkerman/ProyectoFinal_Repro
 
+#### Información de la sesión
+```{r, echo= FALSE}
+sessionInfo()
+```
+
+
+
 ### Referencias
 
