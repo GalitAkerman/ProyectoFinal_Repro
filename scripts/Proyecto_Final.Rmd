@@ -86,7 +86,7 @@ Obteniendo de esta forma 6 variables importantes:
 
 ### Relación entre las variables
 
-Entre estas 6 variables existen varias relaciones importantes, empezando primero por la variable C, que corresponde a la composición del cóctel, esta variable afecta la concentración final de ambos compuestos Aceto e Ibu, ya que la concentración alta o baja de los fármacos, va a influir la concentración final después de la degradación. Y también la composición del cóctel afecta la toxicidad (UT) resultante, ya que algunos tratamientos por sí solos pueden ser mas tóxicos que otros, sin contar todavía la degradación de los hongos. Seguidamente, la variable H, que representa la identidad de los cultivos de hongos, va a afectar directamente las concentraciones finales de Ibu (E) y Aceto (J), ya que existen algunos hongos que logran degradar más unos compuestos sobre otros. A su vez, esta variable también afecta la toxicidad (UT), ya que algunos hongos pueden producir intermediarios tóxicos que afecten el valor de UT, sin degradar los compuestos. 
+Entre estas 6 variables existen varias relaciones importantes, empezando primero por la variable C, que corresponde a la composición del cóctel, esta variable afecta la concentración final de ambos compuestos Aceto e Ibu, ya que la concentración alta o baja de los fármacos, va a influir la concentración final después de la degradación. Una Cn mas alta de alguno de los compuestos va a ser mas díficil de degradar, si se considera el punto bioquímico de saturación enzimática. Y también la composición del cóctel afecta la toxicidad (UT) resultante, ya que algunos tratamientos por sí solos pueden ser mas tóxicos que otros, sin contar todavía la degradación de los hongos. Esto ya que, la toxicidad de un compuesto depende de su vía de acción y formula química. Seguidamente, la variable H, que representa la identidad de los cultivos de hongos, va a afectar directamente las concentraciones finales de Ibu (E) y Aceto (J), ya que existen algunos hongos que logran degradar más unos compuestos sobre otros, por sus capacidad enzimáticas específicas. A su vez, esta variable también afecta la toxicidad (UT), ya que algunos hongos pueden producir intermediarios tóxicos que afecten el valor de UT, sin degradar los compuestos. 
 
 En cuanto a la variable de tiempo en días (D), esta afecta a las concentraciones finales de los compuestos, ya que se espera que a mayor tiempo, mayor sea la degradación de los compuetsos, resultando en una menor concentración. Por último, las dos variables de concentraciones finales de Ibu (E) y Aceto (J) afectan directamente la toxicidad (UT), ya que los compuestos resultantes pueden tener toxicidades distintas e importantes de evidenciar. Para representar estas relaciones entre las variables, se realiza el siguiente diagrama causal:
 
@@ -287,7 +287,7 @@ hist(Dat$J, col = cm.colors(10), main = "", xlab = "Concentración final de Acet
 hist(Dat$Toxicidad, col = cm.colors(10), main = "", xlab = "Ecotoxicidad (Unidad de Toxicidad))")
 ```
 
-Se puede evidenciar, como los tres gráficos anteriores presentan ua tendencia a comportamiento normal, gausiano.
+Se puede evidenciar, como los tres gráficos anteriores presentan ua tendencia a comportamiento normal, Gausiano.
 Ahora se realizan gráficos para ver las tendencias de la relación entre dos variables de interés, empezando por las variables de la pregunta 1. 
 
 ```{r}
@@ -323,7 +323,7 @@ Se evidencia en este gráfico anterior, como la toxicidad es influenciada por la
 
 #### Modelos de regresión lineal simple
 
-Para responder a la pregunta (*¿Cómo afecta la especie del hongo en la degradación de los compuestos fármacos recalcitrantes?*), se realizan dos modelos de regresión lineal simple, para cada uno de los compuestos fármacos de interés, Ibuprofeno y Acetaminophen. Siendo la variable respuesta las concentraciones finales de los compuestos (E y J), y la variable predictora la composición del cultivo de hongos (H) y el tiempo en días (D). No se agregan otras variables, por razonamiento biológico y para no introducir sesgos en el modelo, apoyado por la lógica analizada en el DAG, donde las demás variables son conocidas como *colliders*, y por su naturaleza causal, no es necesario controlarlas. 
+Para responder a la primera pregunta (*¿Cómo afecta la especie del hongo en la degradación de los compuestos fármacos recalcitrantes?*), se realizan dos modelos de regresión lineal simple, para cada uno de los compuestos fármacos de interés, Ibuprofeno y Acetaminophen. Siendo la variable respuesta las concentraciones finales de los compuestos (E y J), y la variable predictora la composición del cultivo de hongos (H) y el tiempo en días (D). No se agregan otras variables, por razonamiento biológico y para no introducir sesgos en el modelo, apoyado por la lógica analizada en el DAG, donde las demás variables son conocidas como *colliders*, y por su naturaleza causal, no es necesario controlarlas. 
 
 #### Regresión Lineal Simple - Cn de Ibuprofeno & Composición del Cultivo
 ```{r}
