@@ -1,0 +1,6 @@
+compendiums             List with compendium skeletons
+make_compendium         Generate folder structures for research
+                        compendiums
+print_skeleton          Print folder structures
+sketchy                 sketchy: quantifying habitat-induced acoustic
+                        signal degradation
